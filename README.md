@@ -54,7 +54,7 @@
   
 + 输出文件：
  
-   1、`*.emapper.annotations` 最终获得的所有蛋白的注释结果
+   1、`*.emapper.annotations` 最终获得的所有蛋白的注释结果（比如test/human.emapper.annotations）
    结果主要是这个文件，每行是一个蛋白质注释结果，总共有22列注释信息，其中COG/KOG号为第19列（倒数第4列），结果类似
    
    `35M44@314146,3AIXI@33154,3BZ60@33208,3D3B7@33213,3J9T0@40674,488P6@7711,498IJ@7742,4M93N@9443,4MVXJ@9604,COG0526@1,KOG0907@2759`
@@ -63,7 +63,7 @@
    
    对应的COG/KOG类别为第21列（倒数第2列），可以直接用于统计。
    
-   2、`*.emapper.seed_orthologs` 所有蛋白质的直系同源比对结果
+   2、`*.emapper.seed_orthologs` 所有蛋白质的直系同源比对结果（比如test/human.emapper.seed_orthologs）
 
 
 ## 大规模蛋白质组注释建议
