@@ -1,28 +1,35 @@
 # 概述
+
 **eggNOG-mapper** 是一款能够快速对大量蛋白质序列进行功能注释的软件。它使用eggNOG数据库提供的直系同源（orthology）与系统发育学（phylogenetics）数据库，将直系同源蛋白的注释映射到陌生蛋白中。
 
 该软件所构建的的直系同源功能映射方法在精确度上要明显优于其它传统的同源搜索方法（比如，BLAST搜索和Interproscan搜索），因为其排出了很多相似的旁系同源（paralogy）蛋白质（该类蛋白质的功能很可能有明显的分化）。
 
 软件的作者提供了详细的eggNOG-mapper与BLAST和Interproscan的比较结果。[点击这里](https://github.com/jhcepas/emapper-benchmark/blob/master/benchmark_analysis.ipynb).
 
+
 # 安装
+
 ## 软件需求
+
 + Linux 系统
 + Python 2.7，目前eggNOG-mapper不支持Python 3版本
 + DIAMOND 软件（一般无需安装，除非是有最新版本，因为eggNOG-mapper已打包了该DIAMOND的可执行文件）
 + BioPython包
 
 ## 存储空间需求
+
 + 至少40GB的空间存放eggNOG注释数据库（eggnog.db）
 + 至少10GB的空间存放序列数据库（eggnog_proteins.dmnd）
 
 ## 下载
+
 + 可以直接从Github网站上下载最新版本的eggNOG-mapper：
 (https://github.com/jhcepas/eggnog-mapper/releases)。解压缩后即可运行，无需编译和安装。
 + 或者从官方仓库（主分支）中克隆下来一份到本地：
 `git clone https://github.com/jhcepas/eggnog-mapper.git`
 
 ## 获取数据库
+
 + 官方提供了自动批量下载两个数据库的脚本，运行如下命令：
 
   `download_eggnog_data.py `
@@ -33,6 +40,7 @@
   `/home/lxc/bin/eggNOG-mapper/data`
  
 ## 基础使用
+
 + 只需要提供需要注释的所有蛋白质序列的文件（FASTA格式），即可运行`emapper.py`：
 
   `python emapper.py -i test.fasta --output test -m diamond --no_file_comments`
